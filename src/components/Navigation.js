@@ -18,7 +18,7 @@ const Navigation = () => {
                <MenuItem>Faq</MenuItem>
             </Menu>
 
-            <Button text="boton" link="/" />
+            <Button text="Botón" link="/" />
          </NavBar>
       </Section>
    );

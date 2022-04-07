@@ -11,7 +11,12 @@ import Team from './components/sections/Team';
 import Faq from './components/sections/Faq';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+/* 
 
+41.30
+1.09.00 about
+
+*/
 function App() {
    return (
       <main>
