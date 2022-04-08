@@ -26,9 +26,6 @@ const Roadmap = () => {
    const addToRefs = el => {
       if (el && !revealRefs.current.includes(el)) {
          revealRefs.current.push(el);
-
-         console.log(revealRefs);
-         console.log('current', revealRefs.current);
       }
    };
 
@@ -51,7 +48,7 @@ const Roadmap = () => {
                   start: 'top center+=200px',
                   end: 'bottom center',
                   scrub: true,
-                  // markers:true,
+                  // markers: true,
                },
             }
          );
