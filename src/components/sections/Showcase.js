@@ -55,8 +55,6 @@ const Showcase = () => {
    const Row1Ref = useRef(null);
    const Row2Ref = useRef(null);
 
-   console.log(Row1Ref);
-
    return (
       <Section id="showcase">
          <Row direction="none" ref={Row1Ref}>
