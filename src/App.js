@@ -19,7 +19,8 @@ import ScrollToTop from './components/ScrollToTop';
 2.21.00 showCase
 2.44.30 team
 3.03.30 faq
-3.19.00
+3.21.30 footer
+3.25.48
 
 */
 function App() {

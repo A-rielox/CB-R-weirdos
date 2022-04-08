@@ -10,6 +10,9 @@ const Accordion = ({ title, children, ScrollTrigger }) => {
       ScrollTrigger.refresh();
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [collapse]);
+   // ScrollTrigger  -  .refresh()
+   //
+   // Forces the ScrollTrigger instance to re-calculate its start and end values (the scroll positions where it'll be activated).
 
    return (
       <Container>

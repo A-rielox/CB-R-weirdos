@@ -18,8 +18,14 @@ const Faq = () => {
          pin: true,
          pinSpacing: false,
          scrub: 1,
-         markers: true,
+         // markers: true,
       });
+      // pin: true, pin the trigger element while active
+      // end: "+=500" end after scrolling 500px beyond the start
+
+      // pin	Boolean | String | Element - An element (or selector text for the element) that should be pinned during the time that the ScrollTrigger is active, meaning it will appear to "stick" in its starting position while the rest of the content continues scrolling underneath it.
+
+      // pinSpacing	Boolean | String - By default, padding will be added to the bottom (or right for horizontal: true) to push other elements down so that when the pinned element gets unpinned, the following content catches up perfectly. Otherwise, things may scroll UNDER the pinned element. You can tell ScrollTrigger not to add any padding by setting pinSpacing: false. If you'd rather it use margin instead of padding, you can set pinSpacing: "margin". Note: pinSpacing works in most cases, but it really depends on the way you set up your DOM and CSS. For example, if you pin something in a parent that has display: flex or position: absolute, the extra padding won't push other elements down/right so you may need to manually space things out. pinSpacing is just a convenience that works in most situations.
 
       return () => {
          ScrollTrigger.kill();
