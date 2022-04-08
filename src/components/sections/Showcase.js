@@ -18,19 +18,19 @@ const move = keyframes`
    100%{ transform: translateX(-100%)   }
 `;
 
+// console.log(e); // el evento mouseover
+// console.log(passRef.current); // todo el row de imagenes
 const NftItem = ({ img, number = 0, price = 0, passRef }) => {
-   // CREO QUE MO ES NECESARIO PASAR LOS EVENTOS ( e )
+   // CREO QUE NO ES NECESARIO PASAR LOS EVENTOS ( e )
    let play = e => {
       passRef.current.style.animationPlayState = 'running';
    };
    let pause = e => {
-      // console.log(e); // el evento mouseover
-      // console.log(passRef.current); // todo el row de imagenes
       passRef.current.style.animationPlayState = 'paused';
    };
 
    return (
-      // CREO QUE aqui tampoco MO ES NECESARIO PASAR LOS EVENTOS ( e )
+      // CREO QUE aqui tampoco NO ES NECESARIO PASAR LOS EVENTOS ( e )
       <ImgContainer onMouseOver={e => pause(e)} onMouseOut={e => play(e)}>
          <img width={500} height={400} src={img} alt="The Weirdos" />
          <Details>
