@@ -20,7 +20,7 @@ import ScrollToTop from './components/ScrollToTop';
 2.44.30 team
 3.03.30 faq
 3.21.30 footer
-3.25.48
+3.46.37 resto
 
 */
 function App() {
