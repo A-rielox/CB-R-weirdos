@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React /* , { lazy, Suspense } */ from 'react';
 import styled from 'styled-components';
 import Banner from './Banner';
 import Logo from './Logo';
@@ -7,7 +7,7 @@ import Facebook from '../Icons/Facebook';
 import Instagram from '../Icons/Instagram';
 import Twitter from '../Icons/Twitter';
 import LinkedIn from '../Icons/LinkedIn';
-import Loading from './Loading';
+// import Loading from './Loading';
 
 const Footer = () => {
    const scrollTo = id => {
