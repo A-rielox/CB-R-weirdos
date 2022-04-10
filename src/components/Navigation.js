@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
 import Button from './Button';
 
 const Navigation = () => {
+   const [click, setClick] = useState(false);
+
    const scrollTo = id => {
       let element = document.getElementById(id);
       console.log(element);
@@ -13,6 +15,8 @@ const Navigation = () => {
          block: 'start',
          inline: 'nearest',
       });
+
+      setClick(!click);
    };
 
    return (
@@ -20,7 +24,16 @@ const Navigation = () => {
          <NavBar>
             <Logo />
 
-            <Menu>
+            <HamburgerMenu
+               click={click}
+               onClick={() => {
+                  setClick(!click);
+               }}
+            >
+               &nbsp;
+            </HamburgerMenu>
+
+            <Menu click={click}>
                <MenuItem onClick={() => scrollTo('home')}>Home</MenuItem>
                <MenuItem onClick={() => scrollTo('about')}>About</MenuItem>
                <MenuItem onClick={() => scrollTo('roadmap')}>Roadmap</MenuItem>
@@ -29,9 +42,17 @@ const Navigation = () => {
                </MenuItem>
                <MenuItem onClick={() => scrollTo('team')}>Team</MenuItem>
                <MenuItem onClick={() => scrollTo('faq')}>Faq</MenuItem>
+
+               <MenuItem>
+                  <div className="mobile">
+                     <Button text="Botón" link="/" />
+                  </div>
+               </MenuItem>
             </Menu>
 
-            <Button text="Botón" link="/" />
+            <div className="desktop">
+               <Button text="Botón" link="/" />
+            </div>
          </NavBar>
       </Section>
    );
@@ -76,7 +97,7 @@ const Menu = styled.ul`
    @media (max-width: 64em) {
       /* 1024 px */
 
-      /* position: fixed;
+      position: fixed;
       top: ${props => props.theme.navHeight};
       left: 0;
       right: 0;
@@ -88,12 +109,13 @@ const Menu = styled.ul`
       backdrop-filter: blur(2px);
 
       transform: ${props =>
-         props.click ? 'translateY(0)' : `translateY(1000%)`};
+         // props.click ? 'translateY(0)' : `translateY(1000%)`};
+         props.click ? 'translateY(0)' : `translateY(100%)`};
       transition: all 0.3s ease;
       flex-direction: column;
       justify-content: center;
 
-      touch-action: none; */
+      touch-action: none;
    }
 `;
 
@@ -115,10 +137,56 @@ const MenuItem = styled.li`
    }
 
    @media (max-width: 64em) {
-      /* margin: 1rem 0;
+      margin: 1rem 0;
 
       &::after {
          display: none;
-      } */
+      }
+   }
+`;
+
+const HamburgerMenu = styled.span`
+   width: ${props => (props.click ? '2rem' : '1.5rem')};
+   height: 2px;
+   background: ${props => props.theme.text};
+
+   position: absolute;
+   top: 2rem;
+   left: 50%;
+   transform: ${props =>
+      props.click
+         ? 'translateX(-50%) rotate(90deg)'
+         : 'translateX(-50%) rotate(0)'};
+
+   display: none;
+   justify-content: center;
+   align-items: center;
+
+   cursor: pointer;
+   transition: all 0.3s ease;
+
+   @media (max-width: 64em) {
+      /* 1024 px */
+      display: flex;
+   }
+
+   &::after,
+   &::before {
+      content: ' ';
+      width: ${props => (props.click ? '1rem' : '1.5rem')};
+      height: 2px;
+      right: ${props => (props.click ? '-2px' : '0')};
+      background: ${props => props.theme.text};
+      position: absolute;
+      transition: all 0.3s ease;
+   }
+
+   &::after {
+      top: ${props => (props.click ? '0.3rem' : '0.5rem')};
+      transform: ${props => (props.click ? 'rotate(-40deg)' : 'rotate(0)')};
+   }
+   &::before {
+      bottom: ${props => (props.click ? '0.3rem' : '0.5rem')};
+      transform: ${props => (props.click ? 'rotate(40deg)' : 'rotate(0)')};
    }
 `;

@@ -50,6 +50,10 @@ const DrawSvg = () => {
             },
          },
       });
+      // onUpdate: "Function" A function that should be called every time the animation updates (on every frame while the animation is active).
+
+      // onToggle	Function - A callback for when the ScrollTrigger toggles from inactive to active or the other way around. This is typically when the scroll position moves past the "start" or "end" in either direction, but if it shoots past BOTH on the same tick, like if the user scrolls extremely fast, onToggle won't fire because the state hasn't changed. You can often use this one callback in the place of onEnter, onLeave, onEnterBack, and onLeaveBack by just checking the isActive property for toggling things. It receives one parameter - the ScrollTrigger instance itself which has properties/methods like progress, direction, isActive, and getVelocity(). Example:
+      // onToggle: self => console.log("toggled to active:", isActive)
 
       return () => {
          if (t1) t1.kill();

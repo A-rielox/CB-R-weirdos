@@ -22,6 +22,9 @@ import ScrollToTop from './components/ScrollToTop';
 3.21.30 footer
 3.46.37 scrollTo
 3.51.50 scrollToTop
+4.01.00 comienza la parte responsive
+4.01.40 hamburger btn
+
 
 */
 function App() {
