@@ -64,14 +64,14 @@ const Title = styled.h2`
    }
 
    @media (max-width: 70em) {
-      /* font-size: ${props => props.theme.fontxl}; */
+      font-size: ${props => props.theme.fontxl};
    }
    @media (max-width: 48em) {
-      /* align-self: center; */
-      /* text-align: center; */
+      align-self: center;
+      text-align: center;
    }
    @media (max-width: 40em) {
-      /* width: 90%; */
+      width: 90%;
    }
 `;
 
@@ -85,12 +85,12 @@ const SubTitle = styled.h3`
    align-self: flex-start;
 
    @media (max-width: 40em) {
-      /* font-size: ${props => props.theme.fontmd}; */
+      font-size: ${props => props.theme.fontmd};
    }
 
    @media (max-width: 48em) {
-      /* align-self: center; */
-      /* text-align: center; */
+      align-self: center;
+      text-align: center;
    }
 `;
 

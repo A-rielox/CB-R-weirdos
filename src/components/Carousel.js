@@ -142,6 +142,7 @@ const Container = styled.div`
          width: 2rem;
       }
    }
+
    .swiper-button-prev {
       color: ${props => props.theme.text};
       left: 0;

@@ -52,15 +52,16 @@ const Container = styled.div`
    align-items: center;
 
    @media (max-width: 64em) {
-      /* width: 85%; */
+      width: 85%;
    }
    @media (max-width: 48em) {
-      /* flex-direction: column-reverse;
-   width: 100%;
-   & > *:first-child {
+      flex-direction: column-reverse;
       width: 100%;
-      margin-top: 2rem;
-   } */
+
+      & > *:first-child {
+         width: 100%;
+         margin-top: 2rem;
+      }
    }
 `;
 
@@ -89,14 +90,14 @@ const Round = styled.div`
    }
 
    @media (max-width: 64em) {
-      /* width: 4rem;
-   height: 4rem;
-   left: none;
-   right: 2rem;
-   bottom: 100%; */
+      width: 4rem;
+      height: 4rem;
+      left: none;
+      right: 2rem;
+      bottom: 100%;
    }
    @media (max-width: 48em) {
-      /* right: 1rem; */
+      right: 1rem;
    }
 `;
 
@@ -118,8 +119,8 @@ const Circle = styled.span`
    font-size: ${props => props.theme.fontxl};
 
    @media (max-width: 64em) {
-      /* width: 2rem;
-   height: 2rem;
-   font-size: ${props => props.theme.fontlg}; */
+      width: 2rem;
+      height: 2rem;
+      font-size: ${props => props.theme.fontlg};
    }
 `;
