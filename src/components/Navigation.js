@@ -16,7 +16,7 @@ const Navigation = () => {
    };
 
    return (
-      <Section>
+      <Section id="navigation">
          <NavBar>
             <Logo />
 

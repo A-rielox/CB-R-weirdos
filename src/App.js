@@ -21,7 +21,7 @@ import ScrollToTop from './components/ScrollToTop';
 3.03.30 faq
 3.21.30 footer
 3.46.37 scrollTo
-3.51.50 resto
+3.51.50 scrollToTop
 
 */
 function App() {
