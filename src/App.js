@@ -25,7 +25,7 @@ import ScrollToTop from './components/ScrollToTop';
 4.01.00 comienza la parte responsive
 4.01.40 hamburger btn
 4.36.00 responsive roadmap
-
+4.47.00 showcase
 
 */
 function App() {
@@ -48,3 +48,5 @@ function App() {
 }
 
 export default App;
+
+// 48 = 768

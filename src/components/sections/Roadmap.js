@@ -169,7 +169,7 @@ const Items = styled.ul`
 
    & > *:nth-of-type(2n + 1) {
       justify-content: start;
-
+      // 48 = 768
       @media (max-width: 48em) {
          justify-content: center;
       }
@@ -181,17 +181,20 @@ const Items = styled.ul`
          @media (max-width: 48em) {
             border-radius: 0 50px 0 50px;
             text-align: left;
+
             p {
                border-radius: 0 40px 0 40px;
             }
          }
       }
+
       p {
          border-radius: 40px 0 40px 0;
       }
    }
    & > *:nth-of-type(2n) {
       justify-content: end;
+
       @media (max-width: 48em) {
          justify-content: center;
       }
