@@ -4,6 +4,7 @@ import Confetti from 'react-confetti';
 
 const ConfettiComponent = () => {
    const { width, height } = useWindowSize();
+   // console.log(width, height);
    return (
       <Confetti
          // numberOfPieces={150}

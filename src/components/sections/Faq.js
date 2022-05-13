@@ -45,6 +45,7 @@ const Faq = () => {
                   Once minted or bought simply connect to your OpenSea account
                   to view your NFTs.
                </Accordion>
+
                <Accordion
                   ScrollTrigger={ScrollTrigger}
                   title="WHAT IS THE METAVERSE?"
@@ -55,6 +56,7 @@ const Faq = () => {
                   a single, universal virtual world that is facilitated by the
                   use of virtual and augmented reality headsets.
                </Accordion>
+
                <Accordion
                   ScrollTrigger={ScrollTrigger}
                   title="WHY DO WE NEED ROYALTIES?"
