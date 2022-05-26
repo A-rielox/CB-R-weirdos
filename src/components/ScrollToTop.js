@@ -5,7 +5,6 @@ import { useWindowScroll } from 'react-use';
 const ScrollToTop = () => {
    const ref = useRef(null);
    const { y } = useWindowScroll();
-   // console.log(y);
 
    const scrollToTop = () => {
       let element = document.getElementById('navigation');

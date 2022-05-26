@@ -80,8 +80,7 @@ const Faq = () => {
                </Accordion>
                <Accordion
                   ScrollTrigger={ScrollTrigger}
-                  title="WHAT ARE THE WEIRDOS?
-"
+                  title="WHAT ARE THE WEIRDOS?"
                >
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Dolore deserunt consequatur quisquam maxime molestias dolores
@@ -90,8 +89,7 @@ const Faq = () => {
                </Accordion>
                <Accordion
                   ScrollTrigger={ScrollTrigger}
-                  title="WHAT IS THE FUSION PROCESS?
-"
+                  title="WHAT IS THE FUSION PROCESS?"
                >
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
                   enim veritatis iusto officia. Exercitationem, ducimus

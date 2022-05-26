@@ -30,6 +30,7 @@ const Accordion = ({ title, children, ScrollTrigger }) => {
                </Indicator>
             )}
          </Title>
+
          <Reveal clicked={collapse}>{children}</Reveal>
       </Container>
    );
